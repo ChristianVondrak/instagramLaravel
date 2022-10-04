@@ -53,4 +53,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+
+    Route::view('profile', 'profile')->name('profile');
+    Route::view('upload', 'upload')->name('upload');            
 });
