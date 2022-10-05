@@ -45,7 +45,7 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
                         <!-- Config -->
-                        <x-dropdown-link href="#">
+                        <x-dropdown-link :href="route('config')">
                             {{ __('Config') }}
                         </x-dropdown-link>
                         <!-- Authentication -->

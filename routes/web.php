@@ -22,3 +22,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/config','App\Http\Controllers\UserController@config')->middleware(['auth', 'verified'])->name('config');
+Route::post('/update','App\Http\Controllers\UserController@update')->name('update');
