@@ -16,16 +16,7 @@ class UserController extends Controller
 
     public function update(Request $request){
         $user = User::find(Auth::user()->id);
-        // $id= Auth::user()->id;
-        // $request->validate([
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'surname' => ['required', 'string', 'max:255'],
-        //     'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        // ]);
-
-        // dd($user);
-
-        // Asignacion de valores
+       
         $user->name = $request->input('name');
         $user->surname = $request->input('surname');
         $user->nick = $request->input('nick');
